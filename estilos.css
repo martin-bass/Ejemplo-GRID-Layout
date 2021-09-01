@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(68deg, #C7C5A7 0.9em, rgba(255, 255, 255, 0) 0.99em) 3em -3em, linear-gradient(-68deg, #C7C5A7 0.9em, rgba(255, 255, 255, 0) 0.99em) -3em -3em, radial-gradient(circle, #c7c5a7 0.9em, rgba(255, 255, 255, 0) 0.99em) 0 0, linear-gradient(68deg, #8BA88F 0.9em, rgba(255, 255, 255, 0) 0.99em) 0 0, linear-gradient(-68deg, #8BA88F 0.9em, rgba(255, 255, 255, 0) 0.99em) 0 0, radial-gradient(circle, #8ba88f 0.9em, rgba(255, 255, 255, 0) 0.99em) 3em 3em;
+    background-size: 6em 6em;
+    background-color: #F0DFD0;
+    background-repeat: repeat;
+    font: 14px/2 'Trebuchet MS', Verdana, sans-serif;
+}
+
+/* HEADER */
+.title h1 {
+    padding: 20px 0;
+    text-align: center;
+    font-size: 2.9em;
+}
+
+.container {
+    background: #8ba88f;
+    width: 90%;
+    max-width: 1000px;
+    margin: 1.6em auto;
+    
+    display: grid;
+    gap: 1.6em;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.container > .header,
+.container > .content,
+.container > .sidebar,
+.container > .footer,
+.container > div {
+    background: #E5E8E8 ;
+    padding: 20px;
+    border: 1px solid #000;
+}
+
+.container .header,
+.container .footer {
+    grid-column: 1/6;
+    background: #273746;
+    color: #fff;
+}
+
+.container > .content {
+    grid-column: span 3;
+}
+
+.content .article {
+    background: #707B7C;
+    padding: 20px;
+    margin-top: 5px;
+    color: #fff;
+}
+
+.content .article h1,
+.content .article p {
+    padding: 10px;
+}
+
+.container > .sidebar {
+    grid-column: span 2;
+    background: #707B7C;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container .sidebar img{
+    width: 100%;
+    margin-top: 5px;
+    border: 1px solid #000;
+}
+
+.container .related-post {
+    background: #707B7C;
+    color: #fff;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+}
+
+.container .related-post:hover {
+    cursor: pointer;
+    color: black;
+    background: #fff;
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        text-align: center;
+    }
+
+    .container .content {
+        grid-column: 1/6;
+    }
+
+    .container .sidebar {
+        grid-column: 1/6;  
+    }
+
+    .container .related-post {
+        grid-column: 1/6; 
+    }
+    
+}
